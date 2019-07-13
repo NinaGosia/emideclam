@@ -1,15 +1,80 @@
-<html>
-    <head>
-        <link rel="stylesheet" href="style.css">
-        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    </head>
-    <body>
-        
-        <div id="app">
-            <p>{{ message }}</p>
-            <button v-on:click="reverseMessage">Reverse Message test</button>
-        </div>
-        
-        <script src="app.js"></script>
-    </body>
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Emi de Clam</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Asap+Condensed:400i,500i|Kaushan+Script&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+</head>
+
+<body>
+
+    <div id="app">
+        <h1>{{ title }}</h1>
+        <p>{{ message }}</p>
+
+        <section id="about-me" class="component-about-me bg-dark text-light py-5">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-4 offset-lg-1 col-sm-12 d-flex align-items-stretched">
+                        <div class="awatar rounded border w-100 swing"></div>
+                    </div>
+                    <div class="col-lg-6 col-sm-12 d-flex align-items-stretched flex-column">
+                        <h1 class="display-3 m-0 mt-3 mt-lg-0">O mnie</h1>
+                        <div class="rounded border p-3">
+                            <p class="h2">Emilia „Emi de Clam” Marlewska</p>
+                            <p class="h5 mb-3">Gdańsk, Polska</p>
+                            <p class="small mb-2">
+                                Grafik komputerowy, animatorka zajęć kreatywnych.<br />
+                                Absolwentka Polsko-Japońskiej Akademii Technik Komputerowych w Gdańsku.
+                            </p>
+                            <p>
+                                Jestem autorką komiksów „Cwaniara” oraz „Goth & Pastel".<br />
+                                Od 2017 roku zajmuję się edycją graficzną komiksów. Na początku w wydawnictwie
+                                Yumegari, a od 2018 w wydawnictwie Hanami.<br />
+                                Tytuły przy których pracowałam to między innymi: „Vampires Library”, „Siesta”,
+                                „Chłopaki z dwudziestego wieku”, „Czy chcesz zostać starą panną?” czy też „Saga
+                                Winlandzka”.<br />
+                                Prowadzę zajęcia kreatywne z komiksu dla młodzieży. Moje warsztaty odbyły się już
+                                między innymi w Bibliotece pod Żabką oraz w Bibliotece z Pasją w Gdyni.<br />
+                                Jestem również liderem na zajęciach „Szkicownik” odbywających się w Domu Sąsiedzkim
+                                w Pałacu w Gdańsku.<br />
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <script src="scripts/app.js"></script>
+</body>
+
 </html>
