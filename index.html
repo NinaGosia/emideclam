@@ -14,18 +14,73 @@
 
     <link href="https://fonts.googleapis.com/css?family=Asap+Condensed:400i,500i|Kaushan+Script&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
+        integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous" />
     <link rel="stylesheet" href="styles/style.css">
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
 </head>
 
-<body>
-
+<body class="bg-primary">
     <div id="app">
-        <h1>{{ title }}</h1>
-        <p>{{ message }}</p>
 
+        <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="/"><img src="images/logo_czarne.svg" height="100" /></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/">{{ navigation.homePage }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about-me">{{ navigation.aboutMe }}</a>
+                        </li>
+                    </ul>
+                </div>
+        </nav>
+        <section id="gallery" class="component-gallery py-5">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 col-md-6"><a href="images/gallery/01.jpg" data-fancybox="gallery"
+                            class="box rounded border"
+                            v-bind:style="{ backgroundImage: `url('images/gallery/01.jpg')` }"></a></div>
+                    <div class="col-12 col-md-6"><a href="images/gallery/02.jpg" data-fancybox="gallery"
+                            class="box rounded border"
+                            v-bind:style="{ backgroundImage: `url('images/gallery/02.jpg')` }"></a></div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-4"><a href="images/gallery/03.jpg" data-fancybox="gallery"
+                            class="box rounded border"
+                            v-bind:style="{ backgroundImage: `url('images/gallery/03.jpg')` }"></a></div>
+                    <div class="col-12 col-md-4"><a href="images/gallery/04.jpg" data-fancybox="gallery"
+                            class="box rounded border"
+                            v-bind:style="{ backgroundImage: `url('images/gallery/04.jpg')` }"></a></div>
+                    <div class="col-12 col-md-4"><a href="images/gallery/05.jpg" data-fancybox="gallery"
+                            class="box rounded border"
+                            v-bind:style="{ backgroundImage: `url('images/gallery/05.jpg')` }"></a></div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-3"><a href="images/gallery/06.jpg" data-fancybox="gallery"
+                            class="box rounded border"
+                            v-bind:style="{ backgroundImage: `url('images/gallery/06.jpg')` }"></a></div>
+                    <div class="col-12 col-md-3"><a href="images/gallery/07.jpg" data-fancybox="gallery"
+                            class="box rounded border"
+                            v-bind:style="{ backgroundImage: `url('images/gallery/07.jpg')` }"></a></div>
+                    <div class="col-12 col-md-3"><a href="images/gallery/08.jpg" data-fancybox="gallery"
+                            class="box rounded border"
+                            v-bind:style="{ backgroundImage: `url('images/gallery/08.jpg')` }"></a></div>
+                    <div class="col-12 col-md-3"><a href="images/gallery/09.jpg" data-fancybox="gallery"
+                            class="box rounded border"
+                            v-bind:style="{ backgroundImage: `url('images/gallery/09.jpg')` }"></a></div>
+                </div>
+            </div>
+        </section>
         <section id="about-me" class="component-about-me bg-dark text-light py-5">
             <div class="container-fluid">
                 <div class="row">
@@ -33,47 +88,35 @@
                         <div class="awatar rounded border w-100 swing"></div>
                     </div>
                     <div class="col-lg-6 col-sm-12 d-flex align-items-stretched flex-column">
-                        <h1 class="display-3 m-0 mt-3 mt-lg-0">O mnie</h1>
+                        <h1 class="display-3 m-0 mt-3 mt-lg-0">{{ aboutMe.title }}</h1>
                         <div class="rounded border p-3">
-                            <p class="h2">Emilia „Emi de Clam” Marlewska</p>
-                            <p class="h5 mb-3">Gdańsk, Polska</p>
-                            <p class="small mb-2">
-                                Grafik komputerowy, animatorka zajęć kreatywnych.<br />
-                                Absolwentka Polsko-Japońskiej Akademii Technik Komputerowych w Gdańsku.
-                            </p>
-                            <p>
-                                Jestem autorką komiksów „Cwaniara” oraz „Goth & Pastel".<br />
-                                Od 2017 roku zajmuję się edycją graficzną komiksów. Na początku w wydawnictwie
-                                Yumegari, a od 2018 w wydawnictwie Hanami.<br />
-                                Tytuły przy których pracowałam to między innymi: „Vampires Library”, „Siesta”,
-                                „Chłopaki z dwudziestego wieku”, „Czy chcesz zostać starą panną?” czy też „Saga
-                                Winlandzka”.<br />
-                                Prowadzę zajęcia kreatywne z komiksu dla młodzieży. Moje warsztaty odbyły się już
-                                między innymi w Bibliotece pod Żabką oraz w Bibliotece z Pasją w Gdyni.<br />
-                                Jestem również liderem na zajęciach „Szkicownik” odbywających się w Domu Sąsiedzkim
-                                w Pałacu w Gdańsku.<br />
-                            </p>
+                            <p class="h2" v-html="aboutMe.header1"></p>
+                            <p class="h5 mb-3" v-html="aboutMe.header2"></p>
+                            <p class="small mb-2" v-html="aboutMe.smallText"></p>
+                            <p v-html="aboutMe.text"></p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
+        <footer class="footer bg-dark text-center">
+            <a href="/"><img src="images/logo_biale.svg" height="100" /></a>
+        </footer>
     </div>
 
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"
+        integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
     <script src="scripts/app.js"></script>
 </body>
 

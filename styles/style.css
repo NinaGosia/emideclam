@@ -1,7 +1,20 @@
-html, body {
-    background-color: #FED2EB;
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
     font-family: 'Asap Condensed', sans-serif;
     font-weight: 400;
+    margin-bottom: 180px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 150px;
+    line-height: 150px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -17,35 +30,44 @@ h1, h2, h3, h4, h5, h6 {
     color: #ffffff !important;
 }
 
+.bg-primary {
+    background-color: #FED2EB !important;
+}
+
 .bg-dark {
     background-color: #000000 !important;
+}
+
+.border {
+    border-width: 5px !important;
+    border-color: #ffffff !important;
 }
 
 @media (min-width: 992px) {
     .swing {
         animation: swing ease-in-out 1s infinite alternate;
         transform-origin: center -20px;
-        float:left;
-        box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+        float: left;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
     }
     .swing img {
         border: 5px solid #f8f8f8;
         display: block;
     }
-    
-    .swing:after{
+    .swing:after {
         content: '';
-        position: absolute;  
-        width: 20px; height: 20px;  
+        position: absolute;
+        width: 20px;
+        height: 20px;
         border: 1px solid #999;
-        top: -10px; left: 50%;
+        top: -10px;
+        left: 50%;
         z-index: 0;
         border-bottom: none;
         border-right: none;
         transform: rotate(45deg);
     }
-    
-    .swing:before{
+    .swing:before {
         content: '';
         position: absolute;
         width: 5px;
@@ -58,8 +80,12 @@ h1, h2, h3, h4, h5, h6 {
         margin-left: .5rem;
     }
     @keyframes swing {
-        0% { transform: rotate(1deg); }
-        100% { transform: rotate(-1deg); }
+        0% {
+            transform: rotate(1deg);
+        }
+        100% {
+            transform: rotate(-1deg);
+        }
     }
 }
 
@@ -68,19 +94,35 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .component-about-me .awatar {
+    background-color: #ffffff;
     background-image: url('../images/emi_autoportret.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     min-height: 300px;
 }
+
 @media (min-width: 768px) and (max-width: 991.98px) {
     .component-about-me .awatar {
         min-height: 550px;
     }
 }
 
-.component-about-me .border {
-    border-width: 5px !important;
-    border-color: #ffffff !important;
+.component-gallery .box {
+    background-color: #000000;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    display: block;
+    height: 20rem;
+    margin: 1rem 0;
+    transition: background-position 3s ease-in;
+    -moz-transition: background-position 3s ease-in;
+    -web-kit-transition: background-position 3s ease-in;
+}
+
+.component-gallery .box:hover {
+    background-color: rgb(0, 0, 0, .5);
+    background-blend-mode: hard-light;
+    background-position: center bottom;
 }
