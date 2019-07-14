@@ -25,59 +25,136 @@
 <body class="bg-primary">
     <div id="app">
 
-        <nav class="navbar navbar-expand-lg navbar-light bg-primary">
-            <div class="container">
-                <a class="navbar-brand" href="/"><img src="images/logo_czarne.svg" height="100" /></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="/">{{ navigation.homePage }}</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#about-me">{{ navigation.aboutMe }}</a>
-                        </li>
-                    </ul>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="offset-md-1 col-12 col-md-10">
+                    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+                        <a class="navbar-brand" href="/"><img src="images/logo_czarne.svg" height="100" /></a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="/">{{ navigation.homePage }}</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#gallery">{{ navigation.gallery }}</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#about-me">{{ navigation.aboutMe }}</a>
+                                </li>
+                            </ul>
+                    </nav>
                 </div>
-        </nav>
+            </div>
+        </div>
+
         <section id="gallery" class="component-gallery py-5">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-12 col-md-6"><a href="images/gallery/01.jpg" data-fancybox="gallery"
-                            class="box rounded border"
-                            v-bind:style="{ backgroundImage: `url('images/gallery/01.jpg')` }"></a></div>
-                    <div class="col-12 col-md-6"><a href="images/gallery/02.jpg" data-fancybox="gallery"
-                            class="box rounded border"
-                            v-bind:style="{ backgroundImage: `url('images/gallery/02.jpg')` }"></a></div>
-                </div>
-                <div class="row">
-                    <div class="col-12 col-md-4"><a href="images/gallery/03.jpg" data-fancybox="gallery"
-                            class="box rounded border"
-                            v-bind:style="{ backgroundImage: `url('images/gallery/03.jpg')` }"></a></div>
-                    <div class="col-12 col-md-4"><a href="images/gallery/04.jpg" data-fancybox="gallery"
-                            class="box rounded border"
-                            v-bind:style="{ backgroundImage: `url('images/gallery/04.jpg')` }"></a></div>
-                    <div class="col-12 col-md-4"><a href="images/gallery/05.jpg" data-fancybox="gallery"
-                            class="box rounded border"
-                            v-bind:style="{ backgroundImage: `url('images/gallery/05.jpg')` }"></a></div>
-                </div>
-                <div class="row">
-                    <div class="col-12 col-md-3"><a href="images/gallery/06.jpg" data-fancybox="gallery"
-                            class="box rounded border"
-                            v-bind:style="{ backgroundImage: `url('images/gallery/06.jpg')` }"></a></div>
-                    <div class="col-12 col-md-3"><a href="images/gallery/07.jpg" data-fancybox="gallery"
-                            class="box rounded border"
-                            v-bind:style="{ backgroundImage: `url('images/gallery/07.jpg')` }"></a></div>
-                    <div class="col-12 col-md-3"><a href="images/gallery/08.jpg" data-fancybox="gallery"
-                            class="box rounded border"
-                            v-bind:style="{ backgroundImage: `url('images/gallery/08.jpg')` }"></a></div>
-                    <div class="col-12 col-md-3"><a href="images/gallery/09.jpg" data-fancybox="gallery"
-                            class="box rounded border"
-                            v-bind:style="{ backgroundImage: `url('images/gallery/09.jpg')` }"></a></div>
+                    <div class="offset-md-1 col-12 col-md-10">
+                        <h1 class="display-1 m-0 mt-3 mt-lg-0">{{ gallery.title }}</h1>
+                        <div class="row">
+                            <div class="col-12 col-md-6"><a href="images/gallery/01.jpg" data-fancybox="main-gallery"
+                                    class="box rounded border swing"
+                                    v-bind:style="{ backgroundImage: `url('images/gallery/01.jpg')` }"></a></div>
+                            <div class="col-12 col-md-6"><a href="images/gallery/02.jpg" data-fancybox="main-gallery"
+                                    class="box rounded border swing"
+                                    v-bind:style="{ backgroundImage: `url('images/gallery/02.jpg')` }"></a></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-md-4"><a href="images/gallery/03.jpg" data-fancybox="main-gallery"
+                                    class="box rounded border swing"
+                                    v-bind:style="{ backgroundImage: `url('images/gallery/03.jpg')` }"></a></div>
+                            <div class="col-12 col-md-4"><a href="images/gallery/04.jpg" data-fancybox="main-gallery"
+                                    class="box rounded border swing"
+                                    v-bind:style="{ backgroundImage: `url('images/gallery/04.jpg')` }"></a></div>
+                            <div class="col-12 col-md-4"><a href="images/gallery/05.jpg" data-fancybox="main-gallery"
+                                    class="box rounded border swing"
+                                    v-bind:style="{ backgroundImage: `url('images/gallery/05.jpg')` }"></a></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-md-3"><a href="images/gallery/06.jpg" data-fancybox="main-gallery"
+                                    class="box rounded border swing"
+                                    v-bind:style="{ backgroundImage: `url('images/gallery/06.jpg')` }"></a></div>
+                            <div class="col-12 col-md-3"><a href="images/gallery/07.jpg" data-fancybox="main-gallery"
+                                    class="box rounded border swing"
+                                    v-bind:style="{ backgroundImage: `url('images/gallery/07.jpg')` }"></a></div>
+                            <div class="col-12 col-md-3"><a href="images/gallery/08.jpg" data-fancybox="main-gallery"
+                                    class="box rounded border swing"
+                                    v-bind:style="{ backgroundImage: `url('images/gallery/08.jpg')` }"></a></div>
+                            <div class="col-12 col-md-3"><a href="images/gallery/09.jpg" data-fancybox="main-gallery"
+                                    class="box rounded border swing"
+                                    v-bind:style="{ backgroundImage: `url('images/gallery/09.jpg')` }"></a></div>
+                        </div>
+                        <div class="row">
+                            <div class="col text-right">
+                                <a class="btn btn-dark badge badge-pill" data-toggle="collapse" href="#collapseGallery"
+                                    role="button" aria-expanded="false" aria-controls="collapseGallery">
+                                    {{ gallery.showMore }}
+                                </a>
+                            </div>
+                        </div>
+                        <div class="collapse" id="collapseGallery">
+                            <div class="row">
+                                <div class="col-12 col-md-3"><a href="images/gallery/10.jpg"
+                                        data-fancybox="main-gallery" class="box rounded border swing"
+                                        v-bind:style="{ backgroundImage: `url('images/gallery/10.jpg')` }"></a></div>
+                                <div class="col-12 col-md-3"><a href="images/gallery/11.jpg"
+                                        data-fancybox="main-gallery" class="box rounded border swing"
+                                        v-bind:style="{ backgroundImage: `url('images/gallery/11.jpg')` }"></a></div>
+                                <div class="col-12 col-md-3"><a href="images/gallery/12.jpg"
+                                        data-fancybox="main-gallery" class="box rounded border swing"
+                                        v-bind:style="{ backgroundImage: `url('images/gallery/12.jpg')` }"></a></div>
+                                <div class="col-12 col-md-3"><a href="images/gallery/13.jpg"
+                                        data-fancybox="main-gallery" class="box rounded border swing"
+                                        v-bind:style="{ backgroundImage: `url('images/gallery/13.jpg')` }"></a></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-md-3"><a href="images/gallery/14.jpg"
+                                        data-fancybox="main-gallery" class="box rounded border swing"
+                                        v-bind:style="{ backgroundImage: `url('images/gallery/14.jpg')` }"></a></div>
+
+                                <div class="col-12 col-md-3"><a href="images/gallery/16.jpg"
+                                        data-fancybox="main-gallery" class="box rounded border swing"
+                                        v-bind:style="{ backgroundImage: `url('images/gallery/16.jpg')` }"></a></div>
+                                <div class="col-12 col-md-3"><a href="images/gallery/17.jpg"
+                                        data-fancybox="main-gallery" class="box rounded border swing"
+                                        v-bind:style="{ backgroundImage: `url('images/gallery/17.jpg')` }"></a></div>
+                                <div class="col-12 col-md-3"><a href="images/gallery/18.jpg"
+                                        data-fancybox="main-gallery" class="box rounded border swing"
+                                        v-bind:style="{ backgroundImage: `url('images/gallery/18.jpg')` }"></a></div>
+                            </div>
+                            <div class="row">
+
+                                <div class="col-12 col-md-3"><a href="images/gallery/19.jpg"
+                                        data-fancybox="main-gallery" class="box rounded border swing"
+                                        v-bind:style="{ backgroundImage: `url('images/gallery/19.jpg')` }"></a></div>
+                                <div class="col-12 col-md-3"><a href="images/gallery/20.jpg"
+                                        data-fancybox="main-gallery" class="box rounded border swing"
+                                        v-bind:style="{ backgroundImage: `url('images/gallery/20.jpg')` }"></a></div>
+                                <div class="col-12 col-md-3"><a href="images/gallery/21.jpg"
+                                        data-fancybox="main-gallery" class="box rounded border swing"
+                                        v-bind:style="{ backgroundImage: `url('images/gallery/21.jpg')` }"></a></div>
+                                <div class="col-12 col-md-3"><a href="images/gallery/22.jpg"
+                                        data-fancybox="main-gallery" class="box rounded border swing"
+                                        v-bind:style="{ backgroundImage: `url('images/gallery/22.jpg')` }"></a></div>
+                            </div>
+                            <div class="row">
+
+                                <div class="col-12 col-md-3"><a href="images/gallery/23.jpg"
+                                        data-fancybox="main-gallery" class="box rounded border swing"
+                                        v-bind:style="{ backgroundImage: `url('images/gallery/23.jpg')` }"></a></div>
+                                <div class="col-12 col-md-3"><a href="images/gallery/24.jpg"
+                                        data-fancybox="main-gallery" class="box rounded border swing"
+                                        v-bind:style="{ backgroundImage: `url('images/gallery/24.jpg')` }"></a></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

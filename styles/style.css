@@ -38,55 +38,27 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #000000 !important;
 }
 
+.btn-dark {
+    background-color: #000000 !important;
+    border-color: #000000;
+}
+
+.btn-dark:hover {
+    background-color: #ffffff !important;
+    color: #000000
+}
+
+.btn {
+    font-family: 'Kaushan Script', cursive;
+    font-weight: 400;
+    font-size: 2rem;
+    padding: 1rem 2.65rem 1rem 2rem;
+    border-width: 4px;
+}
+
 .border {
     border-width: 5px !important;
     border-color: #ffffff !important;
-}
-
-@media (min-width: 992px) {
-    .swing {
-        animation: swing ease-in-out 1s infinite alternate;
-        transform-origin: center -20px;
-        float: left;
-        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-    }
-    .swing img {
-        border: 5px solid #f8f8f8;
-        display: block;
-    }
-    .swing:after {
-        content: '';
-        position: absolute;
-        width: 20px;
-        height: 20px;
-        border: 1px solid #999;
-        top: -10px;
-        left: 50%;
-        z-index: 0;
-        border-bottom: none;
-        border-right: none;
-        transform: rotate(45deg);
-    }
-    .swing:before {
-        content: '';
-        position: absolute;
-        width: 5px;
-        height: 5px;
-        top: -1rem;
-        left: 50%;
-        z-index: 5;
-        border-radius: 50% 50%;
-        background: #ffffff;
-        margin-left: .5rem;
-    }
-    @keyframes swing {
-        0% {
-            transform: rotate(1deg);
-        }
-        100% {
-            transform: rotate(-1deg);
-        }
-    }
 }
 
 .component-about-me {
@@ -108,21 +80,69 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+@media (min-width: 992px) {
+    .component-about-me .swing {
+        animation: swing1 ease-in-out 1s infinite alternate;
+        transform-origin: center -20px;
+        float: left;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    }
+    .component-about-me .swing img {
+        border: 5px solid #f8f8f8;
+        display: block;
+    }
+    .component-about-me .swing:after {
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border: 1px solid #999;
+        top: -10px;
+        left: 50%;
+        z-index: 0;
+        border-bottom: none;
+        border-right: none;
+        transform: rotate(45deg);
+    }
+    .component-about-me .swing:before {
+        content: '';
+        position: absolute;
+        width: 5px;
+        height: 5px;
+        top: -1rem;
+        left: 50%;
+        z-index: 5;
+        border-radius: 50% 50%;
+        background: #ffffff;
+        margin-left: .5rem;
+    }
+    @keyframes swing1 {
+        0% {
+            transform: rotate(1deg);
+        }
+        100% {
+            transform: rotate(-1deg);
+        }
+    }
+}
+
 .component-gallery .box {
     background-color: #000000;
-    background-size: cover;
+    background-size: 120% auto;
     background-repeat: no-repeat;
-    background-position: center top;
+    background-position: center;
     display: block;
-    height: 20rem;
+    width: 100%;
     margin: 1rem 0;
-    transition: background-position 3s ease-in;
-    -moz-transition: background-position 3s ease-in;
-    -web-kit-transition: background-position 3s ease-in;
+    transition: background-size .25s ease-in;
+    -moz-transition: background-size .25s ease-in;
+    -web-kit-transition: background-size .25s ease-in;
+    padding-top: 56.25%;
+    position: relative;
 }
 
 .component-gallery .box:hover {
     background-color: rgb(0, 0, 0, .5);
     background-blend-mode: hard-light;
-    background-position: center bottom;
+    background-size: 100% auto;
 }
