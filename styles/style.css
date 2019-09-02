@@ -65,6 +65,21 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.25rem;
 }
 
+.component-about-me .h2 {
+    font-size: 34px;
+}
+
+.component-about-me .h5 {
+    font-size: 20px;
+}
+
+.component-about-me .small {
+    font-size: 85%;
+    line-height: 21px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
 .component-about-me .awatar {
     background-color: #ffffff;
     background-image: url('../images/emi_autoportret.jpg');
@@ -72,6 +87,11 @@ h1, h2, h3, h4, h5, h6 {
     background-repeat: no-repeat;
     background-position: center;
     min-height: 300px;
+}
+
+.component-about-me h1 + .rounded {
+    padding: 2rem;
+    line-height: 24px;
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {

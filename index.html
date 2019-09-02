@@ -166,11 +166,11 @@
                     </div>
                     <div class="col-lg-6 col-sm-12 d-flex align-items-stretched flex-column">
                         <h1 class="display-3 m-0 mt-3 mt-lg-0">{{ aboutMe.title }}</h1>
-                        <div class="rounded border p-3">
-                            <p class="h2" v-html="aboutMe.header1"></p>
-                            <p class="h5 mb-3" v-html="aboutMe.header2"></p>
-                            <p class="small mb-2" v-html="aboutMe.smallText"></p>
-                            <p v-html="aboutMe.text"></p>
+                        <div class="rounded border">
+                            <p class="h2 mb-0" v-html="aboutMe.header1"></p>
+                            <p class="h5" v-html="aboutMe.header2"></p>
+                            <p class="small" v-html="aboutMe.smallText"></p>
+                            <p v-html="aboutMe.text" class="m-0"></p>
                         </div>
                     </div>
                 </div>
