@@ -4,7 +4,10 @@ var app = new Vue({
             navigation: {
                 homePage: "Strona główna",
                 gallery: "Galeria",
-                aboutMe: "Emi de Clam"
+                aboutMe: "O mnie",
+                comic: "Komiks",
+                media: "Media",
+                collaboration: "Współpraca",
             },
             aboutMe: {
                 title: "O mnie",
@@ -16,6 +19,15 @@ var app = new Vue({
             gallery: {
                 title: "Galeria",
                 showMore: "Więcej",
-            }
+            },
+            comic: {
+                title: "Komiks",
+            },
+            media: {
+                title: "Media",
+            },
+            collaboration: {
+                title: "Współpraca",
+            },
         }
 })
