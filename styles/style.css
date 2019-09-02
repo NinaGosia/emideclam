@@ -6,15 +6,6 @@ html {
 body {
     font-family: 'Asap Condensed', sans-serif;
     font-weight: 400;
-    margin-bottom: 180px;
-}
-
-.footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 150px;
-    line-height: 150px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -59,6 +50,13 @@ h1, h2, h3, h4, h5, h6 {
 .border {
     border-width: 5px !important;
     border-color: #ffffff !important;
+}
+
+footer {
+    margin-top: 2rem;
+    padding: 2rem;
+    color: #ffffff;
+    font-size: 1.2rem;
 }
 
 .component-about-me {
@@ -187,4 +185,9 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 1rem;
         padding: 1rem;
     }
+}
+
+.social-media a {
+    display: inline-block;
+    padding: .4rem .5rem;
 }

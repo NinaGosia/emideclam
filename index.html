@@ -173,8 +173,15 @@
                 </div>
             </div>
         </section>
-        <footer class="footer bg-dark text-center">
+        <footer class="container-fluid bg-dark text-center">
             <a href="/"><img src="images/logo_biale.svg" height="100" /></a>
+            <div class="social-media">
+                <a href="https://www.patreon.com/slyboots" :title="socialMedia.patreon" target="_blank"><img src="images/patreon.svg" height="30" /></a>
+                <a href="https://www.facebook.com/emideclam/" :title="socialMedia.facebook" target="_blank"><img src="images/facebook.svg" height="30" /></a>
+                <a href="https://twitter.com/QuarvalEmi" :title="socialMedia.twitter" target="_blank"><img src="images/twitter.svg" height="30" /></a>
+                <a href="mailto:emiliamarlewska@gmail.com" :title="socialMedia.email" target="_blank"><img src="images/email.svg" height="30" /></a>
+            </div>
+            <p class="mb-0 mt-1">{{ footer.allRights }}</p>
         </footer>
     </div>
 

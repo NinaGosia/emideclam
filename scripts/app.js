@@ -29,5 +29,14 @@ var app = new Vue({
             collaboration: {
                 title: "Współpraca",
             },
+            socialMedia: {
+                patreon: "Patreon: Slyboots",
+                facebook: "Facebook",
+                twitter: "Twitter",
+                email: "Email"
+            },
+            footer: {
+                allRights: "Wszelkie prawa zastrzeżone"
+            }
         }
 })
