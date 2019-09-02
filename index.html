@@ -20,11 +20,19 @@
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-i18n/dist/vue-i18n.js"></script>
+
 </head>
 
 <body class="bg-primary">
-    <div id="app">
+    <div v-cloak id="app">
 
+        <div class="locale-changer">
+            <select v-model="$i18n.locale">
+                <option v-for="(lang, i) in langs" :key="`Lang${i}`" :value="lang">{{ lang }}</option>
+            </select>
+        </div>
 
         <div class="container-fluid component-navigation">
             <div class="row">
@@ -38,13 +46,14 @@
                         </button>
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav ml-auto">
-                                <li class="nav-item"><a class="btn btn-dark badge badge-pill" href="/">{{ navigation.homePage }}</a></li>
-                                <li class="nav-item"><a class="btn btn-dark badge badge-pill" href="#gallery">{{ navigation.gallery }}</a></li>
-                                <li class="nav-item"><a class="btn btn-dark badge badge-pill" href="#comic">{{ navigation.comic }}</a></li>
-                                <li class="nav-item"><a class="btn btn-dark badge badge-pill" href="#media">{{ navigation.media }}</a></li>
-                                <li class="nav-item"><a class="btn btn-dark badge badge-pill" href="#collaboration">{{ navigation.collaboration }}</a></li>
-                                <li class="nav-item"><a class="btn btn-dark badge badge-pill" href="#about-me">{{ navigation.aboutMe }}</a></li>
+                                <li class="nav-item"><a class="btn btn-dark badge badge-pill" href="/">{{ $t("navigation.homePage") }}</a></li>
+                                <li class="nav-item"><a class="btn btn-dark badge badge-pill" href="#gallery">{{ $t("navigation.gallery") }}</a></li>
+                                <li class="nav-item"><a class="btn btn-dark badge badge-pill" href="#comic">{{ $t("navigation.comic") }}</a></li>
+                                <li class="nav-item"><a class="btn btn-dark badge badge-pill" href="#media">{{ $t("navigation.media") }}</a></li>
+                                <li class="nav-item"><a class="btn btn-dark badge badge-pill" href="#collaboration">{{ $t("navigation.collaboration") }}</a></li>
+                                <li class="nav-item"><a class="btn btn-dark badge badge-pill" href="#about-me">{{ $t("navigation.aboutMe") }}</a></li>
                             </ul>
+                        </div>
                     </nav>
                 </div>
             </div>
@@ -54,7 +63,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="offset-lg-1 col-12 col-lg-10">
-                        <h1 class="display-1 m-0 mt-3 mt-lg-0">{{ gallery.title }}</h1>
+                        <h1 class="display-1 m-0 mt-3 mt-lg-0">{{ $t("gallery.title") }}</h1>
                         <div class="row">
                             <div class="col-12 col-md-6"><a href="images/gallery/01.jpg" data-fancybox="main-gallery"
                                     class="box rounded border swing"
@@ -92,7 +101,7 @@
                             <div class="col text-right">
                                 <a class="btn btn-dark badge badge-pill" data-toggle="collapse" href="#collapseGallery"
                                     role="button" aria-expanded="false" aria-controls="collapseGallery">
-                                    {{ gallery.showMore }}
+                                    {{ $t("gallery.showMore") }}
                                 </a>
                             </div>
                         </div>
@@ -162,12 +171,12 @@
                         <div class="awatar rounded border w-100 swing"></div>
                     </div>
                     <div class="col-lg-6 col-sm-12 d-flex align-items-stretched flex-column">
-                        <h1 class="display-3 m-0 mt-3 mt-lg-0">{{ aboutMe.title }}</h1>
+                        <h1 class="display-3 m-0 mt-3 mt-lg-0">{{ $t("aboutMe.title") }}</h1>
                         <div class="rounded border">
-                            <p class="h2 mb-0" v-html="aboutMe.header1"></p>
-                            <p class="h5" v-html="aboutMe.header2"></p>
-                            <p class="small" v-html="aboutMe.smallText"></p>
-                            <p v-html="aboutMe.text" class="m-0"></p>
+                            <p class="h2 mb-0" v-html="$t('aboutMe.header1')"></p>
+                            <p class="h5" v-html="$t('aboutMe.header2')"></p>
+                            <p class="small" v-html="$t('aboutMe.smallText')"></p>
+                            <p v-html="$t('aboutMe.text')" class="m-0"></p>
                         </div>
                     </div>
                 </div>
@@ -176,15 +185,14 @@
         <footer class="container-fluid bg-dark text-center">
             <a href="/"><img src="images/logo_biale.svg" height="100" /></a>
             <div class="social-media">
-                <a href="https://www.patreon.com/slyboots" :title="socialMedia.patreon" target="_blank"><img src="images/patreon.svg" height="30" /></a>
-                <a href="https://www.facebook.com/emideclam/" :title="socialMedia.facebook" target="_blank"><img src="images/facebook.svg" height="30" /></a>
-                <a href="https://twitter.com/QuarvalEmi" :title="socialMedia.twitter" target="_blank"><img src="images/twitter.svg" height="30" /></a>
-                <a href="mailto:emiliamarlewska@gmail.com" :title="socialMedia.email" target="_blank"><img src="images/email.svg" height="30" /></a>
+                <a href="https://www.patreon.com/slyboots" :title="$t('socialMedia.patreon')" target="_blank"><img src="images/patreon.svg" height="30" /></a>
+                <a href="https://www.facebook.com/emideclam/" :title="$t('socialMedia.facebook')" target="_blank"><img src="images/facebook.svg" height="30" /></a>
+                <a href="https://twitter.com/QuarvalEmi" :title="$t('socialMedia.twitter')" target="_blank"><img src="images/twitter.svg" height="30" /></a>
+                <a href="mailto:emiliamarlewska@gmail.com" :title="$t('socialMedia.email')" target="_blank"><img src="images/email.svg" height="30" /></a>
             </div>
-            <p class="mb-0 mt-1">{{ footer.allRights }}</p>
+            <p class="mb-0 mt-1">{{ $t("footer.allRights") }}</p>
         </footer>
     </div>
-
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
