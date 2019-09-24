@@ -99,9 +99,14 @@ var app = new Vue({
     i18n,
     el: "#app",
     data: {
-        langs: ['pl', 'en']
+        langs: ['pl', 'en'],
+        isShrinked: false,
     },
     methods: {
+        handleScroll (event) {
+            var top  = window.pageYOffset || document.documentElement.scrollTop;
+            this.isShrinked = top > 0;
+        },
         copyToClipboard (code) {
             var self = this;
             var popoverElem = $('#copy-email');
@@ -129,5 +134,11 @@ var app = new Vue({
             codeToCopy.setAttribute('type', 'hidden');
             window.getSelection().removeAllRanges();
         },
+    },
+    created () {
+        window.addEventListener('scroll', this.handleScroll);
+    },
+    destroyed () {
+        window.removeEventListener('scroll', this.handleScroll);
     }
 })

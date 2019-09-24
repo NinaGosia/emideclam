@@ -10,6 +10,7 @@ html {
 body {
     font-family: 'Asap Condensed', sans-serif;
     font-weight: 400;
+    color: #000000;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -148,6 +149,10 @@ footer {
     }
 }
 
+.component-gallery {
+    border-top: 2rem solid #000000;
+}
+
 .component-gallery .box {
     background-color: #000000;
     background-size: 120% auto;
@@ -156,9 +161,9 @@ footer {
     display: block;
     width: 100%;
     margin: 1rem 0;
-    transition: background-size .25s ease-in;
-    -moz-transition: background-size .25s ease-in;
-    -web-kit-transition: background-size .25s ease-in;
+    transition: background-size .15s ease-in;
+    -moz-transition: background-size .15s ease-in;
+    -web-kit-transition: background-size .15s ease-in;
     padding-top: 56.25%;
     position: relative;
 }
@@ -170,7 +175,7 @@ footer {
 }
 
 .component-navigation {
-    border-bottom: 2rem solid #000000;
+    border-bottom: 1px solid #000000;
 }
 
 .component-navigation .nav-item > a{
@@ -182,6 +187,34 @@ footer {
     .component-navigation .nav-item > a{
         width: 100%;
     }
+}
+
+.component-navigation,
+.component-navigation svg,
+.component-navigation .nav-item > a {
+    transition: all .15s ease-in;
+    -moz-transition: all .15s ease-in;
+    -web-kit-transition: all .15s ease-in;
+}
+
+.shrink.component-navigation {
+    background-color: #000000!important;
+}
+
+.shrink.component-navigation svg {
+    fill: #ffffff;
+    height: 50px;
+    width: 50px;
+}
+
+.shrink.component-navigation .nav-item > a {
+    font-size: 1rem;
+    padding: 0.5rem;
+    margin: 0;
+}
+
+.shrink.component-navigation .navbar-toggler {
+    background-color: #ffffff;
 }
 
 @media (min-width: 992px) and (max-width: 1470px) {
@@ -200,6 +233,6 @@ footer {
 .locale-changer {
     position: fixed;
     z-index: 9999;
-    top: 1rem;
+    bottom: 1rem;
     right: 1rem;
 }
