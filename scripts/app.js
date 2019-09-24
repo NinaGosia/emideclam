@@ -36,6 +36,11 @@ const messages = {
         },
         footer: {
             allRights: "Wszelkie prawa zastrzeżone",
+        },
+        popover: {
+            copyEmailSuccess: "Adres email został skopiowany!",
+            copyEmailFail: "Nie udało się skopiować adres email :(",
+            copyEmailIssue: "Możesz się ze mną skontaktować przez ",
         }
     },
     en: {
@@ -75,6 +80,11 @@ const messages = {
         },
         footer: {
             allRights: "All rights reserved",
+        },
+        popover: {
+            copyEmailSuccess: "You copied email adress!",
+            copyEmailFail: "There was a failure with coping email adress :(",
+            copyEmailIssue: "You can contact me by "
         }
     }
 }
@@ -90,5 +100,34 @@ var app = new Vue({
     el: "#app",
     data: {
         langs: ['pl', 'en']
+    },
+    methods: {
+        copyToClipboard (code) {
+            var self = this;
+            var popoverElem = $('#copy-email');
+            let codeToCopy = document.querySelector('#code-to-copy')
+            codeToCopy.value = code;
+            codeToCopy.setAttribute('type', 'text');
+            codeToCopy.select();
+            try {
+                var msg = document.execCommand('copy') ? self.$t('popover.copyEmailSuccess') : self.$t('popover.copyEmailSuccess');
+            } catch (err) {
+                var msg = this.$t('popover.copyEmailIssue') + 'emiliamarlewska@gmail.com';
+            }
+
+            popoverElem.popover({
+                content: function () {
+                    return msg;
+                }
+            });
+            popoverElem.popover('show');
+            setTimeout(function () {
+                popoverElem.popover('dispose');
+            }, 2000);
+
+            /* unselect the range */
+            codeToCopy.setAttribute('type', 'hidden');
+            window.getSelection().removeAllRanges();
+        },
     }
 })

@@ -194,6 +194,7 @@ footer {
 .social-media a {
     display: inline-block;
     padding: .4rem .5rem;
+    cursor: pointer;
 }
 
 .locale-changer {
