@@ -1,10 +1,12 @@
 <!doctype html>
-<html lang="en">
+<html lang="pl">
 
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="UTF-8">
+    <meta name="description" content="Emi de Clam portfolio">
+    <meta name="keywords" content="Emi de Clam, digitial art, comic, artist, portfolio">
+    <meta name="author" content="Nina Daliva">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -138,7 +140,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="offset-lg-1 col-12 col-lg-10">
-                        <h1 class="display-1 m-0 mt-3 mt-lg-0">{{ $t("gallery.title") }}</h1>
+                        <h1 class="display-1 m-0 mt-3 mt-lg-0 stroke-white">{{ $t("gallery.title") }}</h1>
                         <div class="row">
                             <div class="col-12 col-md-6"><a href="images/gallery/01.jpg" data-fancybox="main-gallery"
                                     class="box rounded border swing"
@@ -239,6 +241,92 @@
                 </div>
             </div>
         </section>
+
+        <section id="media" class="component-media bg-dark text-light py-1">
+            <hr class="pink" />
+            <div class="container-fluid py-4">
+                <div class="row pb-3">
+                    <div class="col-xl-3 offset-xl-1 col-lg-12 d-flex align-items-stretched">
+                        <a href="https://www.youtube.com/watch?v=5MN9zrZV4mA" class="w-100">
+                            <img src="images/media/bestselerki.png" class="img-fluid w-100">
+                        </a>
+                    </div>
+                    <div class="col-xl-7 col-lg-12 d-flex justify-content-center align-items-center text-center pt-3 pt-xl-0">
+                        <div class="rounded border w-100 h-100 d-flex justify-content-center align-items-center ">
+                            <div>
+                                <span class="prefix">{{ $t("media.prefixReview") }}</span>
+                                <h4 class="display-3 m-0 mt-3 mt-lg-0">"{{ $t("media.cwaniara.no1") }}"</h4>
+                                <span class="suffix">{{ $t("media.sufixBestselerki") }}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row pb-3">
+                    <div class="col-xl-7 offset-xl-1 col-lg-12 d-flex justify-content-center align-items-center text-center">
+                        <div class="rounded border w-100 h-100 d-flex justify-content-center align-items-center ">
+                        <div>
+                            <span class="prefix">{{ $t("media.prefixReview") }}</span>
+                            <h4 class="display-3 m-0 mt-3 mt-lg-0">"{{ $t("media.cwaniara.no1") }}"</h4>
+                            <span class="suffix">{{ $t("media.sufixMatkaPrzelozona") }}</span>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-12 d-flex align-items-stretched pt-3 pt-xl-0">
+                        <a href="https://matkaprzelozona.wordpress.com/2018/12/29/cwaniara-bursztynowy-amulet-czyli-miedzy-sesja-a-komiksem/" class="w-100">
+                            <img src="images/media/matka-przelozona.png" class="img-fluid w-100">
+                        </a>
+                    </div>
+                </div>
+                <div class="row pb-3">
+                    <div class="col-xl-3 offset-xl-1 col-lg-12 d-flex align-items-stretched">
+                        <a href="https://www.geekkochanajmocniej.pl/2018/12/recenzja-komiks-cwaniara-1-.html" class="w-100">
+                            <img src="images/media/geek-kocha-najmocniej.png" class="img-fluid w-100">
+                        </a>
+                    </div>
+                    <div class="col-xl-7 col-lg-12 d-flex justify-content-center align-items-center text-center pt-3 pt-xl-0">
+                        <div class="rounded border w-100 h-100 d-flex justify-content-center align-items-center">
+                        <div>
+                            <span class="prefix">{{ $t("media.prefixReview") }}</span>
+                            <h4 class="display-3 m-0 mt-3 mt-lg-0">"{{ $t("media.cwaniara.no1") }}"</h4>
+                            <span class="suffix">{{ $t("media.sufixGeekKochaNajmocniej") }}</span>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="offset-lg-1 col-12 col-lg-10 pb-3">
+                        <div class="row">
+                            <div class="col text-right">
+                                <a class="btn btn-light badge badge-pill" data-toggle="collapse" href="#collapseMedia"
+                                    role="button" aria-expanded="false" aria-controls="collapseMedia">
+                                    {{ $t("media.showMore") }}
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="collapseMedia" class="collapse">
+                    <div class="row pb-3">
+                        <div class="col-xl-7 offset-xl-1 col-lg-12 d-flex justify-content-center align-items-center text-center">
+                            <div class="rounded border w-100 h-100 d-flex justify-content-center align-items-center">
+                            <div>
+                                <span class="prefix">{{ $t("media.prefixReview") }}</span>
+                                <h4 class="display-3 m-0 mt-3 mt-lg-0">"{{ $t("media.cwaniara.no1") }}"</h4>
+                                <span class="suffix">{{ $t("media.sufixPopbookownik") }}</span>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-12 d-flex align-items-stretched pt-3 pt-xl-0">
+                            <a href="https://popbookownik.pl/byc-najlepsza-bursztynowy-amulet-recenzja-komiksu/" class="w-100">
+                                <img src="images/media/popbookownik.png" class="img-fluid w-100">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="pink" />
+        </section>
+
         <section id="about-me" class="component-about-me bg-dark text-light py-5">
             <div class="container-fluid">
                 <div class="row">
@@ -246,7 +334,7 @@
                         <div class="awatar rounded border w-100 swing"></div>
                     </div>
                     <div class="col-lg-6 col-sm-12 d-flex align-items-stretched flex-column">
-                        <h1 class="display-3 m-0 mt-3 mt-lg-0">{{ $t("aboutMe.title") }}</h1>
+                        <h1 class="display-3 m-0 mt-3 mt-lg-0 stroke-white">{{ $t("aboutMe.title") }}</h1>
                         <div class="rounded border">
                             <p class="h2 mb-0" v-html="$t('aboutMe.header1')"></p>
                             <p class="h5" v-html="$t('aboutMe.header2')"></p>

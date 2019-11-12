@@ -236,3 +236,28 @@ footer {
     bottom: 1rem;
     right: 1rem;
 }
+
+.stroke-white {
+    -webkit-text-stroke: 1px #ffffff;
+    color: #000000;
+    text-shadow: 3px 3px 0 #ffffff, -1px -1px 0 #ffffff,  1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
+}
+
+.component-media h4 {
+    font-size: 3rem;
+}
+
+.component-media .suffix {
+    font-size: 2.5rem;
+}
+
+.component-media .prefix {
+    font-size: 2rem;
+}
+
+hr.pink {
+    height: 2rem;
+    background-color: #000000;
+    border-top: 1rem #FED2EB solid;
+    border-bottom: 1rem #FED2EB solid;
+}

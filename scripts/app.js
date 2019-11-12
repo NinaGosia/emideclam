@@ -24,6 +24,15 @@ const messages = {
         },
         media: {
             title: "Media",
+            prefixReview: "Recenzja komiksu",
+            cwaniara: {
+                no1: "Cwaniara: Bursztynowy Amulet",
+            },
+            sufixBestselerki: "od Bestselerek!!!",
+            sufixMatkaPrzelozona: "od Matki Przełożonej!!!",
+            sufixGeekKochaNajmocniej: "od Geek kocha najmocniej!!!",
+            sufixPopbookownik: "od Popbookownik!!!",
+            showMore: "Więcej"
         },
         collaboration: {
             title: "Współpraca",
@@ -53,7 +62,7 @@ const messages = {
             collaboration: "Collaboration",
         },
         aboutMe: {
-            title: "About mee",
+            title: "About me",
             header1: "Emilia „Emi de Clam” Marlewska",
             header2: "Gdańsk, Polska",
             smallText: "...",
