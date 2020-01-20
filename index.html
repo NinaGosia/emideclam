@@ -28,8 +28,8 @@
 </head>
 
 <body class="bg-primary">
-    <div v-cloak id="app">
-
+<div id="app">
+    <div v-cloak >
         <div class="locale-changer">
             <select v-model="$i18n.locale">
                 <option v-for="(lang, i) in langs" :key="`Lang${i}`" :value="lang">{{ lang }}</option>
@@ -141,100 +141,47 @@
                 <div class="row">
                     <div class="offset-lg-1 col-12 col-lg-10">
                         <h1 class="display-1 m-0 mt-3 mt-lg-0 stroke-white">{{ $t("gallery.title") }}</h1>
-                        <div class="row">
-                            <div class="col-12 col-md-6"><a href="images/gallery/01.jpg" data-fancybox="main-gallery"
-                                    class="box rounded border swing"
-                                    v-bind:style="{ backgroundImage: `url('images/gallery/01.jpg')` }"></a></div>
-                            <div class="col-12 col-md-6"><a href="images/gallery/02.jpg" data-fancybox="main-gallery"
-                                    class="box rounded border swing"
-                                    v-bind:style="{ backgroundImage: `url('images/gallery/02.jpg')` }"></a></div>
+
+                        <div v-for="(row, name, index) in galleryHead" :key="index + '-gallery-head-row'">
+                            <div class="row">
+                                <div v-for="item in row" :key="item + '-gallery-item'" :class="`col-12 col-md-${ 12 / row.length }`">
+                                    <div class="box rounded border swing">
+                                        <div class="spinner-border text-light" role="status">
+                                            <span class="sr-only">Loading...</span>
+                                        </div>
+                                        <a
+                                            :href="`images/gallery/${item}.jpg`"
+                                            data-fancybox="main-gallery"
+                                            v-bind:style="{ backgroundImage: `url('images/gallery/${item}.jpg')` }">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+
                         <div class="row">
-                            <div class="col-12 col-md-4"><a href="images/gallery/03.jpg" data-fancybox="main-gallery"
-                                    class="box rounded border swing"
-                                    v-bind:style="{ backgroundImage: `url('images/gallery/03.jpg')` }"></a></div>
-                            <div class="col-12 col-md-4"><a href="images/gallery/04.jpg" data-fancybox="main-gallery"
-                                    class="box rounded border swing"
-                                    v-bind:style="{ backgroundImage: `url('images/gallery/04.jpg')` }"></a></div>
-                            <div class="col-12 col-md-4"><a href="images/gallery/05.jpg" data-fancybox="main-gallery"
-                                    class="box rounded border swing"
-                                    v-bind:style="{ backgroundImage: `url('images/gallery/05.jpg')` }"></a></div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12 col-md-3"><a href="images/gallery/06.jpg" data-fancybox="main-gallery"
-                                    class="box rounded border swing"
-                                    v-bind:style="{ backgroundImage: `url('images/gallery/06.jpg')` }"></a></div>
-                            <div class="col-12 col-md-3"><a href="images/gallery/07.jpg" data-fancybox="main-gallery"
-                                    class="box rounded border swing"
-                                    v-bind:style="{ backgroundImage: `url('images/gallery/07.jpg')` }"></a></div>
-                            <div class="col-12 col-md-3"><a href="images/gallery/08.jpg" data-fancybox="main-gallery"
-                                    class="box rounded border swing"
-                                    v-bind:style="{ backgroundImage: `url('images/gallery/08.jpg')` }"></a></div>
-                            <div class="col-12 col-md-3"><a href="images/gallery/09.jpg" data-fancybox="main-gallery"
-                                    class="box rounded border swing"
-                                    v-bind:style="{ backgroundImage: `url('images/gallery/09.jpg')` }"></a></div>
-                        </div>
-                        <div class="row">
-                            <div class="col text-right">
+                            <div class="col col-sm-12 text-right">
                                 <a class="btn btn-dark badge badge-pill" data-toggle="collapse" href="#collapseGallery"
                                     role="button" aria-expanded="false" aria-controls="collapseGallery" v-on:click="galleryIsCollapsed = !galleryIsCollapsed">
                                     {{ galleryIsCollapsed ? $t("gallery.showMore") : $t("gallery.showLess") }}
                                 </a>
                             </div>
                         </div>
+
                         <div class="collapse" id="collapseGallery">
-                            <div class="row">
-                                <div class="col-12 col-md-3"><a href="images/gallery/10.jpg"
-                                        data-fancybox="main-gallery" class="box rounded border swing"
-                                        v-bind:style="{ backgroundImage: `url('images/gallery/10.jpg')` }"></a></div>
-                                <div class="col-12 col-md-3"><a href="images/gallery/11.jpg"
-                                        data-fancybox="main-gallery" class="box rounded border swing"
-                                        v-bind:style="{ backgroundImage: `url('images/gallery/11.jpg')` }"></a></div>
-                                <div class="col-12 col-md-3"><a href="images/gallery/12.jpg"
-                                        data-fancybox="main-gallery" class="box rounded border swing"
-                                        v-bind:style="{ backgroundImage: `url('images/gallery/12.jpg')` }"></a></div>
-                                <div class="col-12 col-md-3"><a href="images/gallery/13.jpg"
-                                        data-fancybox="main-gallery" class="box rounded border swing"
-                                        v-bind:style="{ backgroundImage: `url('images/gallery/13.jpg')` }"></a></div>
-                            </div>
-                            <div class="row">
-                                <div class="col-12 col-md-3"><a href="images/gallery/14.jpg"
-                                        data-fancybox="main-gallery" class="box rounded border swing"
-                                        v-bind:style="{ backgroundImage: `url('images/gallery/14.jpg')` }"></a></div>
-
-                                <div class="col-12 col-md-3"><a href="images/gallery/16.jpg"
-                                        data-fancybox="main-gallery" class="box rounded border swing"
-                                        v-bind:style="{ backgroundImage: `url('images/gallery/16.jpg')` }"></a></div>
-                                <div class="col-12 col-md-3"><a href="images/gallery/17.jpg"
-                                        data-fancybox="main-gallery" class="box rounded border swing"
-                                        v-bind:style="{ backgroundImage: `url('images/gallery/17.jpg')` }"></a></div>
-                                <div class="col-12 col-md-3"><a href="images/gallery/18.jpg"
-                                        data-fancybox="main-gallery" class="box rounded border swing"
-                                        v-bind:style="{ backgroundImage: `url('images/gallery/18.jpg')` }"></a></div>
-                            </div>
-                            <div class="row">
-
-                                <div class="col-12 col-md-3"><a href="images/gallery/19.jpg"
-                                        data-fancybox="main-gallery" class="box rounded border swing"
-                                        v-bind:style="{ backgroundImage: `url('images/gallery/19.jpg')` }"></a></div>
-                                <div class="col-12 col-md-3"><a href="images/gallery/20.jpg"
-                                        data-fancybox="main-gallery" class="box rounded border swing"
-                                        v-bind:style="{ backgroundImage: `url('images/gallery/20.jpg')` }"></a></div>
-                                <div class="col-12 col-md-3"><a href="images/gallery/21.jpg"
-                                        data-fancybox="main-gallery" class="box rounded border swing"
-                                        v-bind:style="{ backgroundImage: `url('images/gallery/21.jpg')` }"></a></div>
-                                <div class="col-12 col-md-3"><a href="images/gallery/22.jpg"
-                                        data-fancybox="main-gallery" class="box rounded border swing"
-                                        v-bind:style="{ backgroundImage: `url('images/gallery/22.jpg')` }"></a></div>
-                            </div>
-                            <div class="row">
-
-                                <div class="col-12 col-md-3"><a href="images/gallery/23.jpg"
-                                        data-fancybox="main-gallery" class="box rounded border swing"
-                                        v-bind:style="{ backgroundImage: `url('images/gallery/23.jpg')` }"></a></div>
-                                <div class="col-12 col-md-3"><a href="images/gallery/24.jpg"
-                                        data-fancybox="main-gallery" class="box rounded border swing"
-                                        v-bind:style="{ backgroundImage: `url('images/gallery/24.jpg')` }"></a></div>
+                            <div class="row" v-for="i in Math.ceil(galleryMore.length / 4)">
+                                <div class="col-12 col-md-3" v-for="item in galleryMore.slice((i - 1) * 4, i * 4)">
+                                    <div class="box rounded border swing">
+                                        <div class="spinner-border text-light" role="status">
+                                            <span class="sr-only">Loading...</span>
+                                        </div>
+                                        <a
+                                            :href="`images/gallery/${item}.jpg`"
+                                            data-fancybox="main-gallery"
+                                            v-bind:style="{ backgroundImage: `url('images/gallery/${item}.jpg')` }">
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -303,7 +250,7 @@
                         <div class="row">
                             <div class="col text-right">
                                 <a class="btn btn-light badge badge-pill" data-toggle="collapse" href="#collapseMedia"
-                                    role="button" aria-expanded="false" aria-controls="collapseMedia" v-on:click="mediaIsCollapsed = !mediaIsCollapsed">
+                                    role="button" aria-expanded="false" aria-controls="collapseMedia" v-on:click="mediaIsCollapsed = !galleryIsCollapsed">
                                     {{ mediaIsCollapsed ? $t("media.showMore") : $t("media.showLess")}}
                                 </a>
                             </div>
@@ -372,6 +319,15 @@
             <p class="mb-0 mt-1">{{ $t("footer.allRights") }}</p>
         </footer>
     </div>
+    <div v-if="false" v-show="false" class="d-flex flex-column justify-content-center align-items-center mt-5">
+        <img src="images/logo_czarne.svg" height="100" />
+        <span>Chrome? Email Emi.</span>
+        <span>Firefox? Email Emi.</span>
+        <span>Opera? Email Emi.</span>
+        <span>Safari? Install Wi... Email Emi.</span>
+        <span>Internet Explorer? Install Chrome.</span>
+    </div>
+</div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

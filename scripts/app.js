@@ -121,10 +121,17 @@ var app = new Vue({
     i18n,
     el: "#app",
     data: {
-        langs: ['pl', 'en'],
+        loading: true,
+        langs: ["pl", "en"],
         isShrinked: false,
         galleryIsCollapsed: true,
         mediaIsCollapsed: true,
+        galleryHead: {
+            1: ["01", "02"], 
+            2: ["03", "04", "05"], 
+            3: ["06", "07", "08", "09"]
+        },
+        galleryMore: ["10", "11", "12", "13", "14", "16", "17", "18", "19", "20", "21", "22", "23", "24"]
     },
     methods: {
         handleScroll (event) {
@@ -157,7 +164,7 @@ var app = new Vue({
             /* unselect the range */
             codeToCopy.setAttribute('type', 'hidden');
             window.getSelection().removeAllRanges();
-        },
+        }
     },
     created () {
         window.addEventListener('scroll', this.handleScroll);

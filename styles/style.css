@@ -161,6 +161,20 @@ footer {
     display: block;
     width: 100%;
     margin: 1rem 0;
+}
+
+.component-gallery .box .spinner-border {
+    position: absolute;
+    top: calc(50% - 1rem);
+    left: calc(50% - 1rem);
+}
+
+.component-gallery .box a {
+    background-size: 120% auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+    width: 100%;
     transition: background-size .15s ease-in;
     -moz-transition: background-size .15s ease-in;
     -web-kit-transition: background-size .15s ease-in;
@@ -168,7 +182,7 @@ footer {
     position: relative;
 }
 
-.component-gallery .box:hover {
+.component-gallery .box a:hover {
     background-color: rgb(0, 0, 0, .25);
     background-blend-mode: color;
     background-size: 100% auto;
