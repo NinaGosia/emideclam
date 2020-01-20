@@ -18,6 +18,7 @@ const messages = {
         gallery: {
             title: "Galeria",
             showMore: "Więcej",
+            showLess: "Mniej",
         },
         comic: {
             title: "Komiks",
@@ -32,7 +33,8 @@ const messages = {
             sufixMatkaPrzelozona: "od Matki Przełożonej!!!",
             sufixGeekKochaNajmocniej: "od Geek kocha najmocniej!!!",
             sufixPopbookownik: "od Popbookownik!!!",
-            showMore: "Więcej"
+            showMore: "Więcej",
+            showLess: "Mniej"
         },
         collaboration: {
             title: "Współpraca",
@@ -71,12 +73,23 @@ const messages = {
         gallery: {
             title: "Gallery",
             showMore: "More",
+            showLess: "Less",
         },
         comic: {
             title: "Comic",
         },
         media: {
             title: "Media",
+            prefixReview: "Comic review",
+            cwaniara: {
+                no1: "Cwaniara: Bursztynowy Amulet",
+            },
+            sufixBestselerki: "by Bestselerki!!! (only PL)",
+            sufixMatkaPrzelozona: "by `Matka Przełożona`!!! (only PL)",
+            sufixGeekKochaNajmocniej: "by `Geek kocha najmocniej`!!! (only PL)",
+            sufixPopbookownik: "by `Popbookownik`!!! (only PL)",
+            showMore: "More",
+            showLess: "Less"
         },
         collaboration: {
             title: "Collaboration",
@@ -110,6 +123,8 @@ var app = new Vue({
     data: {
         langs: ['pl', 'en'],
         isShrinked: false,
+        galleryIsCollapsed: true,
+        mediaIsCollapsed: true,
     },
     methods: {
         handleScroll (event) {

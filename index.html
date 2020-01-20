@@ -177,8 +177,8 @@
                         <div class="row">
                             <div class="col text-right">
                                 <a class="btn btn-dark badge badge-pill" data-toggle="collapse" href="#collapseGallery"
-                                    role="button" aria-expanded="false" aria-controls="collapseGallery">
-                                    {{ $t("gallery.showMore") }}
+                                    role="button" aria-expanded="false" aria-controls="collapseGallery" v-on:click="galleryIsCollapsed = !galleryIsCollapsed">
+                                    {{ galleryIsCollapsed ? $t("gallery.showMore") : $t("gallery.showLess") }}
                                 </a>
                             </div>
                         </div>
@@ -303,8 +303,8 @@
                         <div class="row">
                             <div class="col text-right">
                                 <a class="btn btn-light badge badge-pill" data-toggle="collapse" href="#collapseMedia"
-                                    role="button" aria-expanded="false" aria-controls="collapseMedia">
-                                    {{ $t("media.showMore") }}
+                                    role="button" aria-expanded="false" aria-controls="collapseMedia" v-on:click="mediaIsCollapsed = !mediaIsCollapsed">
+                                    {{ mediaIsCollapsed ? $t("media.showMore") : $t("media.showLess")}}
                                 </a>
                             </div>
                         </div>
