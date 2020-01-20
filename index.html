@@ -19,17 +19,28 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
         integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous" />
     <link rel="stylesheet" href="styles/style.css">
-
+    <script type="text/javascript">
+        // Internet Explorer 6-11
+        var isIE = /*@cc_on!@*/false || !!document.documentMode;
+        if (isIE) {
+            document.getElementById("forieusers").style.display = 'block';
+        }
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
     <script src="https://unpkg.com/vue-i18n/dist/vue-i18n.js"></script>
-
 </head>
 
 <body class="bg-primary">
 <div id="app">
-    <div v-cloak >
+    <div v-if="false" id="forieusers">
+        <div class="d-flex flex-column justify-content-center align-items-center mt-5">
+            <img src="images/logo_czarne.svg" height="100" />
+            <span>Internet Explorer? Ahaha... no. Please install something that works.</span>
+        </div>
+    </div>
+    <div v-cloak>
         <div class="locale-changer">
             <select v-model="$i18n.locale">
                 <option v-for="(lang, i) in langs" :key="`Lang${i}`" :value="lang">{{ lang }}</option>
@@ -319,14 +330,7 @@
             <p class="mb-0 mt-1">{{ $t("footer.allRights") }}</p>
         </footer>
     </div>
-    <div v-if="false" v-show="false" class="d-flex flex-column justify-content-center align-items-center mt-5">
-        <img src="images/logo_czarne.svg" height="100" />
-        <span>Chrome? Email Emi.</span>
-        <span>Firefox? Email Emi.</span>
-        <span>Opera? Email Emi.</span>
-        <span>Safari? Install Wi... Email Emi.</span>
-        <span>Internet Explorer? Install Chrome.</span>
-    </div>
+    
 </div>
 
     <!-- Optional JavaScript -->

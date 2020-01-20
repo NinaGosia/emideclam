@@ -275,3 +275,7 @@ hr.pink {
     border-top: 1rem #FED2EB solid;
     border-bottom: 1rem #FED2EB solid;
 }
+
+#messageForUser {
+    display: none;
+}

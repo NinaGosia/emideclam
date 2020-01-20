@@ -121,7 +121,6 @@ var app = new Vue({
     i18n,
     el: "#app",
     data: {
-        loading: true,
         langs: ["pl", "en"],
         isShrinked: false,
         galleryIsCollapsed: true,
