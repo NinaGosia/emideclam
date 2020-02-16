@@ -34,6 +34,10 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #000000 !important;
 }
 
+.bg-pink {
+    background-color: #FED2EB !important;
+}
+
 .btn-dark {
     background-color: #000000 !important;
     border-color: #000000;
@@ -41,7 +45,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn-dark:hover {
     background-color: #ffffff !important;
-    color: #000000
+    color: #000000 !important;
 }
 
 .btn {
@@ -192,13 +196,18 @@ footer {
     border-bottom: 1px solid #000000;
 }
 
-.component-navigation .nav-item > a{
+.component-navigation .nav-item > a {
    margin-left: .5rem;
    margin-bottom: .5rem;
+   color: #ffffff;
+}
+
+.component-navigation .nav-item > a:hover {
+    cursor: pointer;
 }
 
 @media (max-width: 992px) {
-    .component-navigation .nav-item > a{
+    .component-navigation .nav-item > a {
         width: 100%;
     }
 }
@@ -269,11 +278,55 @@ footer {
     font-size: 2rem;
 }
 
-hr.pink {
+.component-comic {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+}
+
+.component-comic img {
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+}
+
+.component-comic .title {
+    height: 100px;
+}
+
+.component-comic .btn {
+    padding: .3rem 1.5rem .3rem 1rem;
+}
+
+@media (min-width: 992px) and (max-width: 1470px) {
+    .component-comic .w-50 {
+        width: 75%!important;
+    }
+}
+@media (max-width: 992px) {
+    .component-comic .w-50 {
+        width: 100%!important;
+    }
+}
+
+hr.pink-dark {
     height: 2rem;
     background-color: #000000;
     border-top: 1rem #FED2EB solid;
     border-bottom: 1rem #FED2EB solid;
+}
+
+hr.pink-white {
+    height: 2rem;
+    background-color: #ffffff;
+    border-top: 1rem #FED2EB solid;
+    border-bottom: 1rem #FED2EB solid;
+}
+
+hr.dark-white {
+    height: 2rem;
+    background-color: #000000;
+    border-top: 1rem #ffffff solid;
+    border-bottom: 1rem #ffffff solid;
 }
 
 #forieusers {

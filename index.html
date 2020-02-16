@@ -127,7 +127,7 @@
                                 <li class="nav-item"><a class="btn btn-dark badge badge-pill" href="#media">{{ $t("navigation.media") }}</a></li>
                                 <li class="nav-item"><a class="btn btn-dark badge badge-pill" href="#collaboration">{{ $t("navigation.collaboration") }}</a></li>
                                 <li class="nav-item"><a class="btn btn-dark badge badge-pill" href="#about-me">{{ $t("navigation.aboutMe") }}</a></li>
-                                <li class="nav-item"><a class="btn btn-dark badge badge-pill" href="#" v-on:click="toggleLanguage()">{{ $t("navigation.language") }}</a></li>
+                                <li class="nav-item"><a class="btn btn-dark badge badge-pill" v-on:click="toggleLanguage()">{{ $t("navigation.language") }}</a></li>
                             </ul>
                         </div>
                     </nav>
@@ -188,8 +188,49 @@
             </div>
         </section>
 
+        <section id="comic" class="component-comic bg-white text-dark py-1">
+            <hr class="pink-white" />
+            <div class="container-fluid py-4">
+                <div class="row pb-3">
+                    <div class="offset-lg-3 col-12 col-lg-9">
+                        <h1 class="display-1 m-0 mt-3 mt-lg-0 stroke-white">{{ $t("comic.title") }}</h1>
+                    </div>
+                </div>
+                <div class="row pb-3">
+                    <div class="col-xl-6 offset-xl-3 col-lg-12 d-flex">
+                        <div class="card-deck">
+                            <div class="card bg-pink border-0 rounded-0">
+                                <div class="card-body text-center">
+                                    <div class="title mt-2 mb-3"><img :src="$t('comic.slyboots.title.url')" :alt="$t('comic.slyboots.title.text')"></div>
+                                    <p class="card-text" v-html="$t('comic.slyboots.text')"></p>
+                                    <p class="w-50 mx-auto">
+                                        <a class="btn btn-dark badge badge-pill d-block mb-1" :href="$t('comic.slyboots.buttons.btn1.url')" target="_blank" v-html="$t('comic.slyboots.buttons.btn1.text')"></a>
+                                        <a class="btn btn-dark badge badge-pill d-block mb-1" :href="$t('comic.slyboots.buttons.btn2.url')" target="_blank" v-html="$t('comic.slyboots.buttons.btn2.text')"></a>
+                                        <a class="btn btn-dark badge badge-pill d-block mb-1" :href="$t('comic.slyboots.buttons.btn3.url')" target="_blank" v-html="$t('comic.slyboots.buttons.btn3.text')"></a>
+                                    </p>
+                                </div>
+                                <img class="card-img-bottom" src="images/comics/Cwana_rysunek.png" :alt="$t('comic.slyboots.title.text')">
+                            </div>
+                            <div class="card bg-pink border-0 rounded-0">
+                                <div class="card-body text-center">
+                                    <div class="title mt-2 mb-3"><img :src="$t('comic.gothandpastel.title.url')" :alt="$t('comic.gothandpastel.title.text')"></div>
+                                    <p class="card-text" v-html="$t('comic.gothandpastel.text')"></p>
+                                    <p class="w-50 mx-auto">
+                                        <a class="btn btn-dark badge badge-pill d-block mb-1" :href="$t('comic.gothandpastel.buttons.btn1.url')" target="_blank" v-html="$t('comic.gothandpastel.buttons.btn1.text')"></a>
+                                        <a class="btn btn-dark badge badge-pill d-block mb-1" :href="$t('comic.gothandpastel.buttons.btn2.url')" target="_blank" v-html="$t('comic.gothandpastel.buttons.btn2.text')"></a>
+                                        <a class="btn btn-dark badge badge-pill d-block mb-1" :href="$t('comic.gothandpastel.buttons.btn3.url')" target="_blank" v-html="$t('comic.gothandpastel.buttons.btn3.text')"></a>
+                                        <a class="btn btn-dark badge badge-pill d-block mb-1" :href="$t('comic.gothandpastel.buttons.btn4.url')" target="_blank" v-html="$t('comic.gothandpastel.buttons.btn4.text')"></a>
+                                    </p>
+                                </div>
+                                <img class="card-img-bottom" src="images/comics/GiP_rysunek.png" :alt="$t('comic.gothandpastel.title.text')">
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </section>
+
         <section id="media" class="component-media bg-dark text-light py-1">
-            <hr class="pink" />
+            <hr class="dark-white" />
             <div class="container-fluid py-4">
                 <div class="row pb-3">
                     <div class="offset-lg-1 col-12 col-lg-10">
@@ -275,7 +316,7 @@
                     </div>
                 </div>
             </div>
-            <hr class="pink" />
+            <hr class="pink-dark" />
         </section>
 
         <section id="collaboration" class="component-collaboration py-5">

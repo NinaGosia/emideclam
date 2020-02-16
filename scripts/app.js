@@ -4,7 +4,7 @@ const messages = {
             homePage: "Strona główna",
             gallery: "Galeria",
             aboutMe: "O mnie",
-            comic: "Komiks",
+            comic: "Komiksy",
             media: "Media",
             collaboration: "Współpraca",
             language: "PL/EN"
@@ -22,7 +22,53 @@ const messages = {
             showLess: "Mniej",
         },
         comic: {
-            title: "Komiks",
+            title: "Komiksy",
+            slyboots: {
+                title: {
+                    text: "Cwaniara",
+                    url: "images/comics/Cwana_napis.png"
+                },
+                text: "Cwaniara, córka herszta złodziei, przyjmuje zlecenie obrabowania pewnej hrabiny z Bursztynowego Amuletu. Pozornie proste zlecenie wplątuje ją w spore tarapaty. Zmuszona do ucieczki i wygnana, prosi o pomoc swoją piracką przyjaciółkę, Karlę Kidd. We dwie postanawiają rozwiązać sprawę Bursztynowego Amuletu...<br />Czytaj na:",
+                buttons: {
+                    btn1: {
+                        text: "Mangaido",
+                        url: "https://mangaido.com/en/series/211"
+                    },
+                    btn2: {
+                        text: "Webtoons",
+                        url: "https://www.webtoons.com/en/challenge/slyboots/list?title_no=142102"
+                    },
+                    btn3: {
+                        text: "Tapas",
+                        url: "https://tapas.io/series/Slyboots"
+                    },
+                }
+            },
+            gothandpastel: {
+                title: {
+                    text: "Goth i Pastel",
+                    url: "images/comics/GiP_napis.png"
+                },
+                text: "Goth i Pastel są przyjaciółkami dzielącymi ze sobą cztery ściany (i kota, Czarną Dziurę). Ich proste, codzienne przygody udekorowane są fioletowym lukrem i różową posypką. Te perypetie można przeczytać na Facebooku, Instagramie, Twitterze i Tapasie.<br />Czytaj na:",
+                buttons: {
+                    btn1: {
+                        text: "Facebook",
+                        url: "https://www.facebook.com/emideclam/"
+                    },
+                    btn2: {
+                        text: "Instagram",
+                        url: "https://www.instagram.com/emideclam/"
+                    },
+                    btn3: {
+                        text: "Twitter",
+                        url: "https://twitter.com/QuarvalEmi"
+                    },
+                    btn4: {
+                        text: "Tapas",
+                        url: "https://tapas.io/series/GothandPastel"
+                    },
+                }
+            }
         },
         media: {
             title: "Media",
@@ -81,6 +127,52 @@ const messages = {
         },
         comic: {
             title: "Comic",
+            slyboots: {
+                title: {
+                    text: "Slyboots",
+                    url: "images/comics/Cwana_napisEN.png"
+                },
+                text: "Slyboots, daughter of a chieftain of thieves, accepts a request to steal the Amber Amulet from a countess. The mission, while seemingly easy, ends up getting her in big trouble. Exiled and on the run, she seeks help from her pirate friend, Karla Kidd. Together they decide to solve the mystery of the Amber Amul...<br />Read on:",
+                buttons: {
+                    btn1: {
+                        text: "Mangaido",
+                        url: "https://mangaido.com/en/series/210"
+                    },
+                    btn2: {
+                        text: "Webtoons",
+                        url: "https://www.webtoons.com/en/challenge/slyboots/list?title_no=142102"
+                    },
+                    btn3: {
+                        text: "Tapas",
+                        url: "https://tapas.io/series/Slyboots"
+                    },
+                }
+            },
+            gothandpastel: {
+                title: {
+                    text: "Goth & Pastel",
+                    url: "images/comics/GiP_napis.png"
+                },
+                text: "Goth and Pastel are friends who share a flat (and a cat named Black Hole). Their simple daily adventures are decorated with purple icing and pink sprinkles. You can read these stories on Facebook, Instagram, Twitter and Tapas.<br />Read on:",
+                buttons: {
+                    btn1: {
+                        text: "Facebook",
+                        url: "https://www.facebook.com/emideclam/"
+                    },
+                    btn2: {
+                        text: "Instagram",
+                        url: "https://www.instagram.com/emideclam/"
+                    },
+                    btn3: {
+                        text: "Twitter",
+                        url: "https://twitter.com/QuarvalEmi"
+                    },
+                    btn4: {
+                        text: "Tapas",
+                        url: "https://tapas.io/series/GothandPastel"
+                    },
+                }
+            }
         },
         media: {
             title: "Media",
