@@ -7,6 +7,7 @@ const messages = {
             comic: "Komiks",
             media: "Media",
             collaboration: "Współpraca",
+            language: "PL/EN"
         },
         aboutMe: {
             title: "O mnie",
@@ -63,14 +64,15 @@ const messages = {
             aboutMe: "About me",
             comic: "Comic",
             media: "Media",
-            collaboration: "Collaboration",
+            collaboration: "Partnerships",
+            language: "PL/EN"
         },
         aboutMe: {
             title: "About me",
             header1: "Emilia „Emi de Clam” Marlewska",
             header2: "Gdańsk, Polska",
-            smallText: "...",
-            text: ".",
+            smallText: "Computer graphic designer, organiser of creative activities<br />Graduate of Polish-Japanese Academy of Information Technology in Gdańsk",
+            text: "I am the author of “Slyboots” and “Goth & Pastel” comics.<br />I have been working in graphic editing of comics since 2017, at first at Yumegari publishing company. Then, since 2018, I have been working at Hanami publishing company.<br />Titles I have worked on include: “Vampires Library”, “Siesta”, “20th Century Boys”, “Will I Be Single Forever?” and “Vinland Saga”.<br />I also hold creative workshops in comics for youth. My classes have already taken place in Biblioteka pod Żabką and Biblioteka z Pasją in Gdynia among others.<br />I am also a leader in “Szkicownik” classes, which take place in Dom Sąsiedzki w Pałacu in Gdańsk.<br />",
         },
         gallery: {
             title: "Gallery",
@@ -84,17 +86,17 @@ const messages = {
             title: "Media",
             prefixReview: "Comic review",
             cwaniara: {
-                no1: "Cwaniara: Bursztynowy Amulet",
+                no1: "Slyboots: The Amber Amulet",
             },
-            sufixBestselerki: "by Bestselerki!!! (only PL)",
-            sufixMatkaPrzelozona: "by `Matka Przełożona`!!! (only PL)",
-            sufixGeekKochaNajmocniej: "by `Geek kocha najmocniej`!!! (only PL)",
-            sufixPopbookownik: "by `Popbookownik`!!! (only PL)",
+            sufixBestselerki: "by Bestselerki!!! (in Polish only)",
+            sufixMatkaPrzelozona: "by `Matka Przełożona`!!! (in Polish only))",
+            sufixGeekKochaNajmocniej: "by `Geek kocha najmocniej`!!! (in Polish only)",
+            sufixPopbookownik: "by `Popbookownik`!!! (in Polish only)",
             showMore: "More",
             showLess: "Less"
         },
         collaboration: {
-            title: "Collaboration",
+            title: "Partnerships",
         },
         socialMedia: {
             patreon: "Patreon: Slyboots",
@@ -125,7 +127,7 @@ var app = new Vue({
     i18n,
     el: "#app",
     data: {
-        langs: ["pl", "en"],
+        isNotPolish: false,
         isShrinked: false,
         galleryIsCollapsed: true,
         mediaIsCollapsed: true,
@@ -172,6 +174,10 @@ var app = new Vue({
             /* unselect the range */
             codeToCopy.setAttribute('type', 'hidden');
             window.getSelection().removeAllRanges();
+        },
+        toggleLanguage() {
+            this.isNotPolish = !this.isNotPolish;
+            i18n.locale = (this.isNotPolish) ? "en" : "pl";
         }
     },
     created () {
