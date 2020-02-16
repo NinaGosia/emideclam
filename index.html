@@ -19,13 +19,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
         integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous" />
     <link rel="stylesheet" href="styles/style.css">
-    <script type="text/javascript">
-        // Internet Explorer 6-11
-        var isIE = /*@cc_on!@*/false || !!document.documentMode;
-        if (isIE) {
-            document.getElementById("forieusers").style.display = 'block';
-        }
-    </script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
@@ -36,7 +29,7 @@
 <div id="app">
     <div v-if="false" id="forieusers">
         <div class="d-flex flex-column justify-content-center align-items-center mt-5">
-            <img src="images/logo_czarne.svg" height="100" />
+            <img src="images/golabek.png" />
             <span>Internet Explorer? Ahaha... no. Please install something that works.</span>
         </div>
     </div>
@@ -334,8 +327,15 @@
     </div>
     
 </div>
-
     <!-- Optional JavaScript -->
+    <script type="text/javascript">
+        // Internet Explorer 6-11
+        var isIE = /*@cc_on!@*/false || !!document.documentMode;
+        if (isIE) {
+            console.log('test');
+            document.getElementById("forieusers").style.display = 'block';
+        }
+    </script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
