@@ -44,6 +44,8 @@ const messages = {
             facebook: "Facebook",
             twitter: "Twitter",
             email: "Email",
+            tapas: "Tapas",
+            instagram: "Instagram",
         },
         footer: {
             allRights: "Wszelkie prawa zastrzeżone",
@@ -99,6 +101,8 @@ const messages = {
             facebook: "Facebook",
             twitter: "Twitter",
             email: "Email",
+            tapas: "Tapas",
+            instagram: "Instagram",
         },
         footer: {
             allRights: "All rights reserved",
