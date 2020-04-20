@@ -7,7 +7,11 @@ const messages = {
             comic: "Komiksy",
             media: "Media",
             collaboration: "Współpraca",
-            language: "PL/EN"
+            language: {
+                pl: "polski",
+                en: "angielski",
+                change: "Zmień język na:"
+            }
         },
         aboutMe: {
             title: "O mnie",
@@ -111,7 +115,11 @@ const messages = {
             comic: "Comic",
             media: "Media",
             collaboration: "Partnerships",
-            language: "PL/EN"
+            language: {
+                pl: "polish",
+                en: "english",
+                change: "Change language to:"
+            }
         },
         aboutMe: {
             title: "About me",
@@ -209,17 +217,17 @@ const messages = {
     }
 }
 
-  // Create VueI18n instance with options
-  const i18n = new VueI18n({
+// Create VueI18n instance with options
+const i18n = new VueI18n({
     locale: 'pl', // set locale
     messages, // set locale messages
-  })
+})
 
 var app = new Vue({
     i18n,
     el: "#app",
     data: {
-        isNotPolish: false,
+        currentLanguage: 'pl',
         isShrinked: false,
         galleryIsCollapsed: true,
         mediaIsCollapsed: true,
@@ -236,11 +244,11 @@ var app = new Vue({
         ]
     },
     methods: {
-        handleScroll (event) {
+        handleScroll(event) {
             var top  = window.pageYOffset || document.documentElement.scrollTop;
             this.isShrinked = top > 0;
         },
-        copyToClipboard (code) {
+        copyToClipboard(code) {
             var self = this;
             var popoverElem = $('#copy-email');
             let codeToCopy = document.querySelector('#code-to-copy')
@@ -267,9 +275,9 @@ var app = new Vue({
             codeToCopy.setAttribute('type', 'hidden');
             window.getSelection().removeAllRanges();
         },
-        toggleLanguage() {
-            this.isNotPolish = !this.isNotPolish;
-            i18n.locale = (this.isNotPolish) ? "en" : "pl";
+        changeLanguage(lang) {
+            i18n.locale = lang;
+            this.currentLanguage = lang;
         }
     },
     created () {

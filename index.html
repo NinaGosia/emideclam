@@ -25,7 +25,7 @@
     <script src="https://unpkg.com/vue-i18n/dist/vue-i18n.js"></script>
 </head>
 
-<body class="bg-primary">
+<body>
 <div id="app">
     <div v-if="false" id="forieusersa">
         <div class="d-flex flex-column justify-content-center text-center align-items-center mt-5">
@@ -34,7 +34,7 @@
         </div>
     </div>
     <div v-cloak>
-        <div class="container-fluid component-navigation bg-primary sticky-top" :class="{ shrink: isShrinked }">
+        <div class="container-fluid component-navigation sticky-top" :class="{ shrink: isShrinked }">
             <div class="row">
                 <div class="offset-lg-1 col-12 col-lg-10">
                     <nav class="navbar sticky-top navbar-expand-lg navbar-light">
@@ -127,15 +127,27 @@
                                 <li class="nav-item"><a class="btn btn-dark badge badge-pill" href="#media">{{ $t("navigation.media") }}</a></li>
                                 <li class="nav-item"><a class="btn btn-dark badge badge-pill" href="#collaboration">{{ $t("navigation.collaboration") }}</a></li>
                                 <li class="nav-item"><a class="btn btn-dark badge badge-pill" href="#about-me">{{ $t("navigation.aboutMe") }}</a></li>
-                                <li class="nav-item"><a class="btn btn-dark badge badge-pill" v-on:click="toggleLanguage()">{{ $t("navigation.language") }}</a></li>
+                                <li class="nav-item">
+                                    <div class="dropdown">
+                                        <button class="btn btn-dark badge badge-pill text-uppercase dropdown-toggle ml-2" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            {{ currentLanguage }}
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item" v-on:click="changeLanguage('pl')" href="#">{{ $t("navigation.language.pl") }}</a>
+                                            <a class="dropdown-item" v-on:click="changeLanguage('en')" href="#">{{ $t("navigation.language.en") }}</a>
+                                        </div>
+                                    </div>
+                                </li>
                             </ul>
                         </div>
                     </nav>
                 </div>
             </div>
         </div>
-
-        <section id="gallery" class="component-gallery py-5">
+        <section id="main-header" class="component-header">
+            <img src="images/emi_galaxyLogo.svg" />
+        </section>
+        <section id="gallery" class="component-gallery pt-0 pb-5">
             <div class="container-fluid">
                 <div class="row">
                     <div class="offset-lg-1 col-12 col-lg-10">
@@ -188,18 +200,18 @@
             </div>
         </section>
 
-        <section id="comic" class="component-comic bg-white text-dark py-1">
-            <hr class="pink-white" />
+        <section id="comic" class="component-comic text-dark py-1">
+            <hr class="white-violet" />
             <div class="container-fluid py-4">
                 <div class="row pb-3">
                     <div class="offset-lg-3 col-12 col-lg-9">
-                        <h1 class="display-1 m-0 mt-3 mt-lg-0 stroke-white">{{ $t("comic.title") }}</h1>
+                        <h1 class="display-1 m-0 mt-3 mt-lg-0 mb-2 stroke-white">{{ $t("comic.title") }}</h1>
                     </div>
                 </div>
                 <div class="row pb-3">
                     <div class="col-xl-6 offset-xl-3 col-lg-12 d-flex">
                         <div class="card-deck">
-                            <div class="card bg-pink border-0 rounded-0">
+                            <div class="card border-0 rounded-0">
                                 <div class="card-body text-center">
                                     <div class="title mt-2 mb-3"><img :src="$t('comic.slyboots.title.url')" :alt="$t('comic.slyboots.title.text')"></div>
                                     <p class="card-text" v-html="$t('comic.slyboots.text')"></p>
@@ -211,7 +223,7 @@
                                 </div>
                                 <img class="card-img-bottom" src="images/comics/Cwana_rysunek.png" :alt="$t('comic.slyboots.title.text')">
                             </div>
-                            <div class="card bg-pink border-0 rounded-0">
+                            <div class="card border-0 rounded-0">
                                 <div class="card-body text-center">
                                     <div class="title mt-2 mb-3"><img :src="$t('comic.gothandpastel.title.url')" :alt="$t('comic.gothandpastel.title.text')"></div>
                                     <p class="card-text" v-html="$t('comic.gothandpastel.text')"></p>
@@ -230,7 +242,7 @@
         </section>
 
         <section id="media" class="component-media bg-dark text-light py-1">
-            <hr class="dark-white" />
+            <hr class="violet-dark" />
             <div class="container-fluid py-4">
                 <div class="row pb-3">
                     <div class="offset-lg-1 col-12 col-lg-10">
@@ -290,7 +302,7 @@
                         <div class="row">
                             <div class="col text-right">
                                 <a class="btn btn-light badge badge-pill" data-toggle="collapse" href="#collapseMedia"
-                                    role="button" aria-expanded="false" aria-controls="collapseMedia" v-on:click="mediaIsCollapsed = !galleryIsCollapsed">
+                                    role="button" aria-expanded="false" aria-controls="collapseMedia" v-on:click="mediaIsCollapsed = !mediaIsCollapsed">
                                     {{ mediaIsCollapsed ? $t("media.showMore") : $t("media.showLess")}}
                                 </a>
                             </div>
@@ -316,7 +328,7 @@
                     </div>
                 </div>
             </div>
-            <hr class="pink-dark" />
+            <hr class="white-dark" />
         </section>
 
         <section id="collaboration" class="component-collaboration py-5">
