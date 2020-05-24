@@ -240,7 +240,8 @@ var app = new Vue({
             "10", "11", "12", "13", "14", 
             "16", "17", "18", "19", "20", 
             "21", "22", "23", "24", "Kanut",
-            "Lindsey_Stirling_2", "Morgyn Ember"
+            "Lindsey_Stirling_2", "Morgyn Ember", "Wiedzmin", "bursztyn",
+            "golabek_story", "golabek_story_01_ring"
         ]
     },
     methods: {
