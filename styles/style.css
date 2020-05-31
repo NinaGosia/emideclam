@@ -420,3 +420,11 @@ hr.dark-white {
         left: 10%;
     }
 }
+
+@media (min-width: 992px) {
+    .component-ad .swing {
+        animation: swing1 ease-in-out 1s infinite alternate;
+        transform-origin: center -20px;
+    }
+
+}

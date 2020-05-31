@@ -92,6 +92,7 @@ const messages = {
         },
         socialMedia: {
             patreon: "Patreon: Slyboots",
+            kofi: "Ko-Fi",
             facebook: "Facebook",
             twitter: "Twitter",
             email: "Email",
@@ -140,7 +141,7 @@ const messages = {
                     text: "Slyboots",
                     url: "images/comics/Cwana_napisEN.png"
                 },
-                text: "Slyboots, daughter of a chieftain of thieves, accepts a request to steal the Amber Amulet from a countess. The mission, while seemingly easy, ends up getting her in big trouble. Exiled and on the run, she seeks help from her pirate friend, Karla Kidd. Together they decide to solve the mystery of the Amber Amul...<br />Read on:",
+                text: "Slyboots, daughter of a chieftain of thieves, accepts a request to steal the Amber Amulet from a countess. The mission, while seemingly easy, ends up getting her in big trouble. Exiled and on the run, she seeks help from her pirate friend, Karla Kidd. Together they decide to solve the mystery of the Amber Amulet...<br />Read on:",
                 buttons: {
                     btn1: {
                         text: "Mangaido",
