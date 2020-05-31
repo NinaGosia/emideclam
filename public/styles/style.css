@@ -9,7 +9,7 @@ html {
 }
 
 body {
-    background-image: url(../images/tlo_cale.svg);
+    background-image: url(../images/tlo_cale.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: top center;
@@ -298,7 +298,7 @@ footer {
 
 .component-comic {
     background-color: #bea9f8;
-    background-image: url(../images/bg_galaxy.svg);
+    background-image: url(../images/bg_galaxy.png);
     background-repeat: repeat-x;
     background-position: center;
     background-size: 50%;
@@ -383,7 +383,7 @@ hr.dark-white {
 
 .cosmic-bar {
     height: 2rem;
-    background-image: url(../images/bg_galaxy.svg);
+    background-image: url(../images/bg_galaxy.png);
     background-repeat: repeat-x;
     background-position: center;
     background-size: 50%;
@@ -403,7 +403,7 @@ hr.dark-white {
     display: block;
     height: 25rem;
     width: 15rem;
-    background-image: url(../images/golabek_od_gory.svg);
+    background-image: url(../images/golabek_od_gory.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;

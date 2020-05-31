@@ -23,6 +23,16 @@
 
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
     <script src="https://unpkg.com/vue-i18n/dist/vue-i18n.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141699192-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-141699192-1');
+    </script>
 </head>
 
 <body>
@@ -166,7 +176,7 @@
                                         <a
                                             :href="`images/gallery/${item}.jpg`"
                                             data-fancybox="main-gallery"
-                                            v-bind:style="{ backgroundImage: `url('images/gallery/${item}.jpg')` }">
+                                            v-bind:style="{ backgroundImage: `url('images/gallery/thumb/${item}.jpg')` }">
                                         </a>
                                     </div>
                                 </div>
@@ -192,7 +202,7 @@
                                         <a
                                             :href="`images/gallery/${item}.jpg`"
                                             data-fancybox="main-gallery"
-                                            v-bind:style="{ backgroundImage: `url('images/gallery/${item}.jpg')` }">
+                                            v-bind:style="{ backgroundImage: `url('images/gallery/thumb/${item}.jpg')` }">
                                         </a>
                                     </div>
                                 </div>
@@ -421,14 +431,14 @@
     <script src="scripts/app.js"></script>
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script defer src="/__/firebase/7.14.6/firebase-app.js"></script>
+    <script src="/__/firebase/7.14.6/firebase-app.js"></script>
 
     <!-- TODO: Add SDKs for Firebase products that you want to use
         https://firebase.google.com/docs/web/setup#available-libraries -->
-    <script defer src="/__/firebase/7.14.6/firebase-analytics.js"></script>
+    <script src="/__/firebase/7.14.6/firebase-analytics.js"></script>
 
     <!-- Initialize Firebase -->
-    <script defer src="/__/firebase/init.js"></script>
+    <script src="/__/firebase/init.js"></script>
 </body>
 
 </html>
