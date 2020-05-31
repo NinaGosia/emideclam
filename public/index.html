@@ -133,8 +133,8 @@
                                             {{ currentLanguage }}
                                         </button>
                                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                            <a class="dropdown-item" v-on:click="changeLanguage('pl')" href="#">{{ $t("navigation.language.pl") }}</a>
-                                            <a class="dropdown-item" v-on:click="changeLanguage('en')" href="#">{{ $t("navigation.language.en") }}</a>
+                                            <a class="dropdown-item" v-on:click.stop.prevent="changeLanguage('pl')" href="#">{{ $t("navigation.language.pl") }}</a>
+                                            <a class="dropdown-item" v-on:click.stop.prevent="changeLanguage('en')" href="#">{{ $t("navigation.language.en") }}</a>
                                         </div>
                                     </div>
                                 </li>
@@ -404,7 +404,6 @@
         // Internet Explorer 6-11
         var isIE = /*@cc_on!@*/false || !!document.documentMode;
         if (isIE) {
-            console.log('test');
             document.getElementById("forieusers").style.display = 'block';
         }
     </script>
@@ -420,6 +419,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"
         integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
     <script src="scripts/app.js"></script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script defer src="/__/firebase/7.14.6/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script defer src="/__/firebase/7.14.6/firebase-analytics.js"></script>
+
+    <!-- Initialize Firebase -->
+    <script defer src="/__/firebase/init.js"></script>
 </body>
 
 </html>

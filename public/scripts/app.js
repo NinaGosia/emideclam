@@ -8,8 +8,8 @@ const messages = {
             media: "Media",
             collaboration: "Współpraca",
             language: {
-                pl: "polski",
-                en: "angielski",
+                pl: "polski / polish",
+                en: "angielski / english",
                 change: "Zmień język na:"
             }
         },
@@ -117,8 +117,8 @@ const messages = {
             media: "Media",
             collaboration: "Partnerships",
             language: {
-                pl: "polish",
-                en: "english",
+                pl: "polish / polski",
+                en: "english / angielski",
                 change: "Change language to:"
             }
         },
@@ -201,6 +201,7 @@ const messages = {
         },
         socialMedia: {
             patreon: "Patreon: Slyboots",
+            kofi: "Ko-Fi",
             facebook: "Facebook",
             twitter: "Twitter",
             email: "Email",
